@@ -1,0 +1,57 @@
+### Registrar un nuevo usuario
+POST http://127.0.0.1:5000/users
+Content-Type: application/json
+
+{
+    "name": "Almo",
+    "email": "almo@example.com",
+    "password": "Password123",
+    "role": "user",
+    "salary": 50000,
+    "hire_date": "2020-01-15",
+    "birth_date": "1990-10-20"
+}
+
+### Obtener todos los usuarios
+GET http://127.0.0.1:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyODU4NzQyNSwianRpIjoiYmI3ZmEyYzYtYzdjNi00NjM2LWIxNWUtMjY3NzIxNTg4Mjc1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFsaWNlQGV4YW1wbGUuY29tIiwibmJmIjoxNzI4NTg3NDI1LCJleHAiOjE3Mjg1ODgzMjV9.bxwVotzAY5fA8Y1RTroVoNx5t0NUzM9qE0p0fHqJuf8
+
+### Registrar un nuevo departamento
+POST http://127.0.0.1:5000/departments
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyODU4NzQyNSwianRpIjoiYmI3ZmEyYzYtYzdjNi00NjM2LWIxNWUtMjY3NzIxNTg4Mjc1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFsaWNlQGV4YW1wbGUuY29tIiwibmJmIjoxNzI4NTg3NDI1LCJleHAiOjE3Mjg1ODgzMjV9.bxwVotzAY5fA8Y1RTroVoNx5t0NUzM9qE0p0fHqJuf8
+Content-Type: application/json
+
+{
+    "name": "IT",
+    "manager": "John Doeling"
+}
+
+### Listar todos los departamentos
+GET http://127.0.0.1:5000/departments
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyODU4NzQyNSwianRpIjoiYmI3ZmEyYzYtYzdjNi00NjM2LWIxNWUtMjY3NzIxNTg4Mjc1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFsaWNlQGV4YW1wbGUuY29tIiwibmJmIjoxNzI4NTg3NDI1LCJleHAiOjE3Mjg1ODgzMjV9.bxwVotzAY5fA8Y1RTroVoNx5t0NUzM9qE0p0fHqJuf8
+
+### Calcular el salario promedio
+GET http://127.0.0.1:5000/average-salary
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyODU4NzQyNSwianRpIjoiYmI3ZmEyYzYtYzdjNi00NjM2LWIxNWUtMjY3NzIxNTg4Mjc1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFsaWNlQGV4YW1wbGUuY29tIiwibmJmIjoxNzI4NTg3NDI1LCJleHAiOjE3Mjg1ODgzMjV9.bxwVotzAY5fA8Y1RTroVoNx5t0NUzM9qE0p0fHqJuf8
+
+### Contar empleados por departamento
+GET http://127.0.0.1:5000/count-employees
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyODU4NzQyNSwianRpIjoiYmI3ZmEyYzYtYzdjNi00NjM2LWIxNWUtMjY3NzIxNTg4Mjc1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFsaWNlQGV4YW1wbGUuY29tIiwibmJmIjoxNzI4NTg3NDI1LCJleHAiOjE3Mjg1ODgzMjV9.bxwVotzAY5fA8Y1RTroVoNx5t0NUzM9qE0p0fHqJuf8
+
+### Obtener cumpleaños del mes en curso
+GET http://127.0.0.1:5000/birthdays
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyODU4NzQyNSwianRpIjoiYmI3ZmEyYzYtYzdjNi00NjM2LWIxNWUtMjY3NzIxNTg4Mjc1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFsaWNlQGV4YW1wbGUuY29tIiwibmJmIjoxNzI4NTg3NDI1LCJleHAiOjE3Mjg1ODgzMjV9.bxwVotzAY5fA8Y1RTroVoNx5t0NUzM9qE0p0fHqJuf8
+
+
+############################
+### INICIAR SESION ANTES ###
+############################
+
+### Iniciar sesión para obtener un token
+POST http://127.0.0.1:5000/login
+Content-Type: application/json
+
+{
+    "email": "alice@example.com",
+    "password": "Password123"
+}
