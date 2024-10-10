@@ -51,6 +51,10 @@ Esta API RESTful permite la gestión de usuarios y roles, así como la administr
     ```bash
     pip install -r requirements.txt
     ```
+5. Iniciar la api
+    ```python
+    python app.py
+    ```
 
 ## Configuración de Variables de Entorno
 
