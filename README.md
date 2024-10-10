@@ -86,6 +86,40 @@ backend-evaluation-grupo-almo/
 └── .gitignore                
 ```
 
+### Tablas de la base de datos
+
+```sql
+    CREATE DATABASE db_grupoAlmo;
+
+    USE db_grupoAlmo;
+
+    CREATE TABLE departments (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(100) NOT NULL,
+        manager VARCHAR(100) NOT NULL
+    );
+
+    CREATE TABLE projects (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(100) NOT NULL,
+        start_date DATE,
+        end_date DATE,
+        department_id INT,
+        FOREIGN KEY (department_id) REFERENCES departments(id)
+    );
+
+    CREATE TABLE users (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(100),
+        email VARCHAR(100) UNIQUE,
+        password VARCHAR(100),
+        role ENUM('admin', 'user'),
+        salary DECIMAL(10,2),
+        hire_date DATE,
+        birth_date DATE
+    );
+```
+
 ## Endpoints
 
 ### Inicio de Sesión
